@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6a86afb-c0e1-4506-af10-5a4502068537" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cz3003backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cz3003backend/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +34,7 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="json" value="1" />
-          <entry key="py" value="36" />
+          <entry key="py" value="37" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
@@ -41,7 +42,7 @@
         <counts>
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="35" />
+          <entry key="Python" value="36" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -49,7 +50,7 @@
         <counts>
           <entry key="gitignore" value="7" />
           <entry key="json" value="3" />
-          <entry key="py" value="4510" />
+          <entry key="py" value="4581" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
@@ -57,7 +58,7 @@
         <counts>
           <entry key="JSON" value="3" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="4510" />
+          <entry key="Python" value="4581" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -65,11 +66,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cz3003backend/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+            <state relative-caret-position="379">
+              <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1541114271000" expanded="true" signature="159:161" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,7 +112,6 @@
         <option value="$PROJECT_DIR$/api/urls.py" />
         <option value="$PROJECT_DIR$/api/utils/calendar.py" />
         <option value="$PROJECT_DIR$/api/utils/enum.py" />
-        <option value="$PROJECT_DIR$/api/models.py" />
         <option value="$PROJECT_DIR$/cz3003backend/urls.py" />
         <option value="$PROJECT_DIR$/api/forms.py" />
         <option value="$PROJECT_DIR$/api/tests.py" />
@@ -108,6 +121,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/zappa_settings.json" />
         <option value="$PROJECT_DIR$/cz3003backend/settings.py" />
+        <option value="$PROJECT_DIR$/api/models.py" />
       </list>
     </option>
   </component>
@@ -346,17 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1541109168000" expanded="true" signature="159:161" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/utils/api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -443,8 +446,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cz3003backend/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+        <state relative-caret-position="379">
+          <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1541114271000" expanded="true" signature="159:161" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

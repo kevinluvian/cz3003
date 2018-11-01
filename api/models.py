@@ -16,6 +16,8 @@ class Crisis(models.Model):
 		(CrisisStatus.IN_PROGRESS, 'In progress'),
 		(CrisisStatus.COMPLETED, 'Completed'),
 	))
+	lat = models.CharField(default='1.3509431', max_length=200)
+	lng = models.CharField(default='103.6768071', max_length=200)
 	added = models.DateTimeField(auto_now_add=True)
 	updated = models.DateTimeField(auto_now=True)
 
