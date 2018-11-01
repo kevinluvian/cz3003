@@ -44,10 +44,10 @@ class CMSEndpointTest(BaseTestCase):
 		# edit crisis, using cmc key, assert success
 		self.post_api('/api/crisis/{}/edit/'.format(crisis1.id), {'key': CMC_KEY, **edit_crisis_data})
 		# get all crisis
-		data = self.get_api('/api/crisis/')
+		data = self.get_api('/api/crisis/{}/'.format(crisis1.id))
 		# assert edited
-		self.assertEqual(data[0]['location'], edit_crisis_data['location'])
-		self.assertEqual(data[0]['detail'], edit_crisis_data['detail'])
+		self.assertEqual(data['location'], edit_crisis_data['location'])
+		self.assertEqual(data['detail'], edit_crisis_data['detail'])
 
 		# update crisis 1 action
 		self.post_api('/api/crisis/{}/create_action_update/'.format(crisis1.id), {'key': CMC_KEY, 'description': 'fire dept on the way'})

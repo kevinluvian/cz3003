@@ -1,4 +1,4 @@
-from random import random
+import random
 
 from rest_framework.response import Response
 
@@ -63,7 +63,7 @@ def cmc_and_fire_dept(func):
 
 @api_view(['GET'], serializer=BaseAPISerializer)
 def get_crisis_list(request, data):
-	crisis_list = Crisis.objects.all()
+	crisis_list = Crisis.objects.all().order_by('pk')
 	return Response({'success': True, 'data': [serialize_crisis(x) for x in crisis_list]})
 
 
