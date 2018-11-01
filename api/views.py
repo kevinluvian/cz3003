@@ -23,6 +23,8 @@ def serialize_crisis(crisis):
 		'detail': crisis.detail,
 		'assigned_agency': crisis.assigned_agency,
 		'status': crisis.status,
+		'lat': crisis.lat,
+		'lng': crisis.lng,
 		'action_updates': [serialize_action_update(x) for x in action_updates],
 		'added': from_timezone_to_timestamp(crisis.added),
 	}
