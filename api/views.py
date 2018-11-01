@@ -1,3 +1,5 @@
+from random import random
+
 from rest_framework.response import Response
 
 from api.forms import BaseAPISerializer, UpdateCrisisStatusSerializer, CreateActionUpdateSerializer, EditCrisisSerializer, CreateCrisisSerializer
@@ -75,6 +77,8 @@ def create_crisis(request, data):
 	crisis = Crisis.objects.create(
 		location=location,
 		detail=detail,
+		lat=1.3509431 + (random.randint(0, 100) * 0.00001),
+		lng=103.6768071 + (random.randint(0, 100) * 0.00001),
 		assigned_agency=assigned_agency,
 		status=CrisisStatus.IN_PROGRESS
 	)
