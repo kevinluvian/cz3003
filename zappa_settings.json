@@ -2,9 +2,14 @@
     "dev": {
         "aws_region": "ap-southeast-1",
         "django_settings": "cz3003backend.settings",
+        "exclude": ["venv"],
         "profile_name": "default",
         "project_name": "cz3003backend",
         "runtime": "python3.6",
-        "s3_bucket": "cz3003"
+        "s3_bucket": "cz3003",
+        "vpc_config": {
+            "SubnetIds": [ "subnet-7e3a4437", "subnet-a45917c3" ],
+            "SecurityGroupIds": [ "sg-dae660a3" ]
+        }
     }
 }

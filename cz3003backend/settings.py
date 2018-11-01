@@ -86,8 +86,12 @@ TIME_ZONE = 'Asia/Singapore'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cz3003',
+        'USER': 'cz3003',
+        'PASSWORD': 'kevinkevin123',
+        'HOST': 'cz3003.cejmg8zokyys.ap-southeast-1.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
