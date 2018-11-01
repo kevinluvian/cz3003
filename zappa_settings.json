@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "aws_region": "ap-southeast-1",
+        "django_settings": "cz3003backend.settings",
+        "profile_name": "default",
+        "project_name": "cz3003backend",
+        "runtime": "python3.6",
+        "s3_bucket": "cz3003"
+    }
+}
