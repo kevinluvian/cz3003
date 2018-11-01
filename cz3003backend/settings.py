@@ -27,7 +27,7 @@ CMC_KEY = '123o123kle21oj1o23j1o2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
