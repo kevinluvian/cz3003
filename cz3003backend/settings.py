@@ -26,7 +26,7 @@ CMC_KEY = '123o123kle21oj1o23j1o2'
 PRIME_KEY = 'qowerjqioru23k4j1qweqklwej'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
