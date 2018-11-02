@@ -167,14 +167,14 @@ def notify_public(request, crisis_id, data):
 	return Response({'success': True, 'data': serialize_crisis(crisis)})
 
 
-@api_view(['GET'], serializer=BaseAPISerializer)
+@api_view(['POST'], serializer=BaseAPISerializer)
 @only_prime
 def get_report_list(request):
 	reports = Report.objects.all().order_by('-date')
 	return Response({'success': True, 'data': [serialize_report(x) for x in reports]})
 
 
-@api_view(['GET'], serializer=BaseAPISerializer)
+@api_view(['POST'], serializer=BaseAPISerializer)
 @only_prime
 def get_report_detail(request, report_id):
 	report = Report.objects.filter(id=report_id).first()
