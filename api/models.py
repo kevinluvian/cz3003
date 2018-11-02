@@ -34,5 +34,6 @@ class Report(models.Model):
 	description = models.TextField()
 	date = models.DateField()
 	file_url = models.TextField()
+	summary = models.TextField(default='Burning white Lamborghini at student walk. All passengers aresafe and are out of the vehicle. Chance of another explosion.')
 	added = models.DateTimeField(auto_now_add=True)
 	updated = models.DateTimeField(auto_now=True)

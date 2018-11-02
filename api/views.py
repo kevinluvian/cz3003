@@ -55,7 +55,7 @@ def only_cmc(func):
 def only_fire_dept(func):
 	def _func(request, data, *args, **kwargs):
 		if data.get('key', None) == FIRE_KEY:
-			return func(request, data, *args, **kwargs)
+			return func(request=request, data=data, *args, **kwargs)
 		else:
 			return Response({'success': False, 'errors': ['Invalid API key']}, status=400)
 	return _func
@@ -64,7 +64,7 @@ def only_fire_dept(func):
 def only_prime(func):
 	def _func(request, data, *args, **kwargs):
 		if data.get('key', None) == PRIME_KEY:
-			return func(request, data, *args, **kwargs)
+			return func(request=request, data=data, *args, **kwargs)
 		else:
 			return Response({'success': False, 'errors': ['Invalid API key']}, status=400)
 	return _func
@@ -169,15 +169,15 @@ def notify_public(request, crisis_id, data):
 
 @api_view(['POST'], serializer=BaseAPISerializer)
 @only_prime
-def get_report_list(request):
+def get_report_list(request, data):
 	reports = Report.objects.all().order_by('-date')
 	return Response({'success': True, 'data': [serialize_report(x) for x in reports]})
 
 
 @api_view(['POST'], serializer=BaseAPISerializer)
 @only_prime
-def get_report_detail(request, report_id):
+def get_report_detail(request, report_id, data):
 	report = Report.objects.filter(id=report_id).first()
 	if report is None:
 		return Response({'success': False, 'errors': ['Report does not exist']}, status=400)
-	return Response({'success': True, 'data': serialize_report(report)})
+	return Response({'success': True, 'data':serialize_report(report)})
