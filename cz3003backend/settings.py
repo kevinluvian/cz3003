@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,6 +25,10 @@ SECRET_KEY = '+org)ijknmm=u!w6z2bbj_bt)qx7^ryf4+n0x8q%hn9td1@w61'
 FIRE_KEY = 'qwerklqhweor3l42k3123'
 CMC_KEY = '123o123kle21oj1o23j1o2'
 PRIME_KEY = 'qowerjqioru23k4j1qweqklwej'
+
+IS_TESTING = False
+if 'test' in sys.argv or 'test_coverage' in sys.argv:
+    IS_TESTING = True
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -84,16 +89,24 @@ TIME_ZONE = 'Asia/Singapore'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cz3003',
-        'USER': 'cz3003',
-        'PASSWORD': 'kevinkevin123',
-        'HOST': 'cz3003.cejmg8zokyys.ap-southeast-1.rds.amazonaws.com',
-        'PORT': '5432',
+if IS_TESTING:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'cz3003',
+            'USER': 'cz3003',
+            'PASSWORD': 'kevinkevin123',
+            'HOST': 'cz3003.cejmg8zokyys.ap-southeast-1.rds.amazonaws.com',
+            'PORT': '5432',
+        }
+    }
 
 
 # Password validation

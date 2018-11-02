@@ -93,5 +93,5 @@ class CMSEndpointTest(BaseTestCase):
 		self.assertEqual(data[1]['status'], CrisisStatus.IN_PROGRESS)
 
 		# notify public
-		self.post_api('/api/crisis/{}/notify_public/'.format(crisis2.id), {'key': CMC_KEY, 'status': CrisisStatus.COMPLETED})
+		self.post_api('/api/crisis/{}/notify_public/'.format(crisis2.id), {'key': CMC_KEY, 'description': 'notification to public'})
 		# assert success
