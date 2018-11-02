@@ -23,3 +23,7 @@ class CreateActionUpdateSerializer(BaseAPISerializer):
 
 class UpdateCrisisStatusSerializer(BaseAPISerializer):
 	status = serializers.IntegerField()
+
+
+class NotifyPublicSerializer(BaseAPISerializer):
+	description = serializers.CharField(allow_blank=True)

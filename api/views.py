@@ -2,18 +2,18 @@ import random
 
 from rest_framework.response import Response
 
-from api.forms import BaseAPISerializer, UpdateCrisisStatusSerializer, CreateActionUpdateSerializer, EditCrisisSerializer, CreateCrisisSerializer
-from api.models import Crisis, CrisisStatus, ActionUpdate
+from api.forms import BaseAPISerializer, UpdateCrisisStatusSerializer, CreateActionUpdateSerializer, EditCrisisSerializer, CreateCrisisSerializer, NotifyPublicSerializer
+from api.models import Crisis, CrisisStatus, ActionUpdate, Report
 from api.utils.api import api_view
-from api.utils.calendar import from_timezone_to_timestamp
-from cz3003backend.settings import FIRE_KEY, CMC_KEY
+from api.utils.calendar import from_timezone_to_timestamp, format_date_obj
+from cz3003backend.settings import FIRE_KEY, CMC_KEY, PRIME_KEY
 
 
 def serialize_action_update(action_update):
 	return {
 		'id': action_update.id,
 		'description': action_update.description,
-		'added': action_update.added,
+		'added': from_timezone_to_timestamp(action_update.added),
 	}
 
 
@@ -32,6 +32,15 @@ def serialize_crisis(crisis):
 	}
 
 
+def serialize_report(report):
+	return {
+		'id': report.id,
+		'code': report.code,
+		'description': report.description,
+		'date': format_date_obj(report.date)
+	}
+
+
 def only_cmc(func):
 	def _func(request, data, *args, **kwargs):
 		key = data.get('key', None)
@@ -45,6 +54,15 @@ def only_cmc(func):
 def only_fire_dept(func):
 	def _func(request, data, *args, **kwargs):
 		if data.get('key', None) == FIRE_KEY:
+			return func(request, data, *args, **kwargs)
+		else:
+			return Response({'success': False, 'errors': ['Invalid API key']}, status=400)
+	return _func
+
+
+def only_prime(func):
+	def _func(request, data, *args, **kwargs):
+		if data.get('key', None) == PRIME_KEY:
 			return func(request, data, *args, **kwargs)
 		else:
 			return Response({'success': False, 'errors': ['Invalid API key']}, status=400)
@@ -77,8 +95,8 @@ def create_crisis(request, data):
 	crisis = Crisis.objects.create(
 		location=location,
 		detail=detail,
-		lat=1.3509431 + (random.randint(0, 100) * 0.00001),
-		lng=103.6768071 + (random.randint(0, 100) * 0.00001),
+		lat=str(float(1.3509431) + (random.randint(0, 100) * 0.00001)),
+		lng=str(float(103.6768071) + (random.randint(0, 100) * 0.00001)),
 		assigned_agency=assigned_agency,
 		status=CrisisStatus.IN_PROGRESS
 	)
@@ -136,12 +154,29 @@ def update_crisis_status(request, crisis_id, data):
 	return Response({'success': True, 'data': serialize_crisis(crisis)})
 
 
-@api_view(['POST'], serializer=BaseAPISerializer)
+@api_view(['POST'], serializer=NotifyPublicSerializer)
 @only_cmc
 def notify_public(request, crisis_id, data):
 	crisis = Crisis.objects.filter(id=crisis_id).first()
 	if crisis is None:
 		return Response({'success': False, 'errors': ['Crisis does not exist']}, status=400)
-	# TODO: post to facebook
-	return Response({'success': True})
 
+	description = data['description']
+	# TODO: post to facebook
+	return Response({'success': True, 'data': serialize_crisis(crisis)})
+
+
+@api_view(['GET'], serializer=BaseAPISerializer)
+@only_prime
+def get_report_list(request):
+	reports = Report.objects.all()
+	return Response({'success': True, 'data': [serialize_report(x) for x in reports]})
+
+
+@api_view(['GET'], serializer=BaseAPISerializer)
+@only_prime
+def get_report_detail(request, report_id):
+	report = Report.objects.filter(id=report_id).first()
+	if report is None:
+		return Response({'success': False, 'errors': ['Report does not exist']}, status=400)
+	return Response({'success': True, 'data': serialize_report(report)})

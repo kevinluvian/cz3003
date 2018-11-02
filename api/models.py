@@ -27,3 +27,11 @@ class ActionUpdate(models.Model):
 	description = models.TextField()
 	added = models.DateTimeField(auto_now_add=True)
 	updated = models.DateTimeField(auto_now=True)
+
+
+class Report(models.Model):
+	code = models.CharField(max_length=20)
+	description = models.TextField()
+	date = models.DateField()
+	added = models.DateTimeField(auto_now_add=True)
+	updated = models.DateTimeField(auto_now=True)

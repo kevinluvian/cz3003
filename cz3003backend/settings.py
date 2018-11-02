@@ -23,6 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+org)ijknmm=u!w6z2bbj_bt)qx7^ryf4+n0x8q%hn9td1@w61'
 FIRE_KEY = 'qwerklqhweor3l42k3123'
 CMC_KEY = '123o123kle21oj1o23j1o2'
+PRIME_KEY = 'qowerjqioru23k4j1qweqklwej'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
