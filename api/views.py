@@ -38,7 +38,8 @@ def serialize_report(report):
 		'code': report.code,
 		'description': report.description,
 		'file_url': report.file_url,
-		'date': format_date_obj(report.date)
+		'date': format_date_obj(report.date),
+		'summary': report.summary
 	}
 
 
@@ -96,8 +97,8 @@ def create_crisis(request, data):
 	crisis = Crisis.objects.create(
 		location=location,
 		detail=detail,
-		lat=str(float(1.3509431) + (random.randint(0, 100) * 0.00001)),
-		lng=str(float(103.6768071) + (random.randint(0, 100) * 0.00001)),
+		lat=str(float(1.3509431) + (random.randint(0, 100) * 0.0001)),
+		lng=str(float(103.6768071) + (random.randint(0, 100) * 0.0001)),
 		assigned_agency=assigned_agency,
 		status=CrisisStatus.IN_PROGRESS
 	)

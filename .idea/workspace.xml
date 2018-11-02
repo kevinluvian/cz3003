@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6a86afb-c0e1-4506-af10-5a4502068537" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,7 +52,7 @@
         <counts>
           <entry key="gitignore" value="7" />
           <entry key="json" value="3" />
-          <entry key="py" value="6070" />
+          <entry key="py" value="6098" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
@@ -62,7 +60,7 @@
         <counts>
           <entry key="JSON" value="3" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="6070" />
+          <entry key="Python" value="6098" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -70,31 +68,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="66" column="28" lean-forward="true" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+            <state relative-caret-position="172">
+              <caret line="100" column="66" selection-start-line="100" selection-start-column="66" selection-end-line="100" selection-end-column="66" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1541199879000" expanded="true" signature="1070:2455" ph="..." />
-                <marker date="1541199879000" expanded="true" signature="1845:2097" ph="..." />
-                <marker date="1541199879000" expanded="true" signature="2125:2406" ph="..." />
-                <marker date="1541199879000" expanded="true" signature="2629:2697" ph="..." />
-                <marker date="1541199879000" expanded="true" signature="5780:5783" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="36" column="163" selection-start-line="36" selection-start-column="163" selection-end-line="36" selection-end-column="163" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <marker date="1541200298000" expanded="true" signature="159:161" ph="..." />
+                <marker date="1541202367000" expanded="true" signature="1070:2484" ph="..." />
+                <marker date="1541202367000" expanded="true" signature="1874:2126" ph="..." />
+                <marker date="1541202367000" expanded="true" signature="2154:2435" ph="..." />
+                <marker date="1541202367000" expanded="true" signature="2658:2726" ph="..." />
+                <marker date="1541202367000" expanded="true" signature="5807:5810" ph="..." />
               </folding>
             </state>
           </provider>
@@ -134,8 +119,8 @@
         <option value="$PROJECT_DIR$/api/utils/calendar.py" />
         <option value="$PROJECT_DIR$/api/admin.py" />
         <option value="$PROJECT_DIR$/cz3003backend/settings.py" />
-        <option value="$PROJECT_DIR$/api/views.py" />
         <option value="$PROJECT_DIR$/api/models.py" />
+        <option value="$PROJECT_DIR$/api/views.py" />
       </list>
     </option>
   </component>
@@ -315,7 +300,7 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -330,7 +315,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.3698075" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.3698075" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -463,28 +448,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/views.py">
+    <entry file="file://$PROJECT_DIR$/api/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="66" column="28" lean-forward="true" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+        <state relative-caret-position="309">
+          <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1541199879000" expanded="true" signature="1070:2455" ph="..." />
-            <marker date="1541199879000" expanded="true" signature="1845:2097" ph="..." />
-            <marker date="1541199879000" expanded="true" signature="2125:2406" ph="..." />
-            <marker date="1541199879000" expanded="true" signature="2629:2697" ph="..." />
-            <marker date="1541199879000" expanded="true" signature="5780:5783" ph="..." />
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1541200298000" expanded="true" signature="159:161" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/models.py">
+    <entry file="file://$PROJECT_DIR$/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="36" column="163" selection-start-line="36" selection-start-column="163" selection-end-line="36" selection-end-column="163" />
+        <state relative-caret-position="172">
+          <caret line="100" column="66" selection-start-line="100" selection-start-column="66" selection-end-line="100" selection-end-column="66" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1541200298000" expanded="true" signature="159:161" ph="..." />
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1541202367000" expanded="true" signature="1070:2484" ph="..." />
+            <marker date="1541202367000" expanded="true" signature="1874:2126" ph="..." />
+            <marker date="1541202367000" expanded="true" signature="2154:2435" ph="..." />
+            <marker date="1541202367000" expanded="true" signature="2658:2726" ph="..." />
+            <marker date="1541202367000" expanded="true" signature="5807:5810" ph="..." />
           </folding>
         </state>
       </provider>
