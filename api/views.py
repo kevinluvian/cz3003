@@ -170,7 +170,7 @@ def notify_public(request, crisis_id, data):
 @api_view(['GET'], serializer=BaseAPISerializer)
 @only_prime
 def get_report_list(request):
-	reports = Report.objects.all()
+	reports = Report.objects.all().order_by('-date')
 	return Response({'success': True, 'data': [serialize_report(x) for x in reports]})
 
 
