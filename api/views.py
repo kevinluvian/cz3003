@@ -37,6 +37,7 @@ def serialize_report(report):
 		'id': report.id,
 		'code': report.code,
 		'description': report.description,
+		'file_url': report.file_url,
 		'date': format_date_obj(report.date)
 	}
 
